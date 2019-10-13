@@ -1,0 +1,17 @@
+import random
+
+money = 100
+
+#Write your game of chance functions here
+heads = 1
+tails = 2
+def coin_flip(call, bet):
+  flip = random.randint(1,2)
+  money = 100
+  if call == flip:
+    money += bet
+    return "You WIN! You now have $" + str(money) + "!"
+  elif call != flip:
+    return "Oh no! You lose! you now have $" + str(money - bet) + "!"
+
+print(coin_flip(heads, 50))
